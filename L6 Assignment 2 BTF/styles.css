@@ -1,0 +1,120 @@
+:root {
+    --color-grey: #323232;
+    --color-black: #000000AA;
+    --color-white: #ffffff;
+    --color-cyan: #02cba4;
+}
+
+.kumbh-sans {
+  font-family: "Kumbh Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: auto;
+  font-style: normal;
+  font-variation-settings:
+    "YOPQ" 300;
+}
+
+body {
+    background-color: var(--color-grey);
+    margin: 0;
+    font-family: "Kumbh Sans", sans-serif;
+    color: var(--color-white);
+}
+
+header {
+    background-color: var(--color-black);
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 65px;
+    z-index: 1000;
+    color: var(--color-white);
+    display: flex;
+    align-content: center;
+    text-align: center;
+    justify-content: space-around;
+    backdrop-filter: blur(7px);
+    border-bottom: var(--color-cyan) 2px solid;
+}
+
+h1 {
+    color: var(--color-cyan);
+}
+
+section {
+    border-bottom: var(--color-cyan) 2px solid;
+    padding: 15px 15%;
+}
+
+.landing h4{
+    position: relative;
+    left: 200px;
+}
+
+.featured-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    position: relative;
+}
+
+.featured {
+    height: 350px;
+}
+
+.featured-album {
+    width: 20%;
+}
+
+.featured-album:hover {
+    width: 25%;
+}
+
+footer {
+    background-color: var(--color-black);
+    color: var(--color-white);
+    display: flex;
+    align-content: center;
+    text-align: center;
+    justify-content: space-around;
+    padding: 15px;
+}
+
+nav {
+    display: flex;
+    align-content: center;
+    justify-content: space-evenly;
+}
+
+.nav {
+    background-color: var(--color-black);
+}
+
+a {
+    all: unset;
+    cursor: pointer;
+}
+
+a:hover {
+    color: var(--color-cyan);
+}
+
+table {
+    width: 70%;
+    text-align: left;
+    margin: 25px;
+}
+
+th {
+    color: var(--color-cyan);
+}
+
+th, td {
+    padding: 15px 30px;
+}
+
+td {
+    border-top: 1px solid var(--color-cyan);
+}
