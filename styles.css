@@ -1,0 +1,131 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: repeating-linear-gradient(
+        45deg,
+        #2c2c2c,
+        #2c2c2c 6px,
+        #161616 6px,
+        #1a1a1a 12px
+    );
+    background-attachment: fixed;
+    color: whitesmoke;
+    margin: 0;
+}
+
+header {
+    padding: 1vh;
+    background-color: #151515;
+    margin: 0;
+    border-bottom: solid 1px whitesmoke;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+main {
+    padding: 3vh 10vw;
+}
+
+a {
+    color: inherit;
+    transition-duration: .3s;
+    text-decoration: none;
+}
+
+.announcement a {
+    text-decoration: underline;
+}
+
+.announcement a:hover {
+    color: #151515;
+}
+
+header a:hover, footer a:hover {
+    text-decoration: underline;
+}
+
+section {
+    padding: 2vh;
+    border-radius: 4px;
+    height: auto;
+    width: auto;
+    backdrop-filter: blur(2px);
+}
+
+.announcement {
+    background-color: #97eb9455;
+    border: 1px solid #97eb94;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+
+    margin-bottom: 3vh;
+}
+
+.preview {
+    background-color: #5fb2ff66;
+    border: 1px solid #5fb2ff;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.card {
+    border-radius: 4px;
+    width: 30%;
+    transition-duration: .3s;
+    border: 1px solid whitesmoke;
+    margin: 1vh 1vw;
+    background-color: #15151588;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.card p {
+    margin: 1.2em;
+    font-weight: bolder;
+}
+
+img {
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    border-bottom: 1px solid whitesmoke;
+    width: 100%;
+}
+
+footer {
+    padding: 1vh;
+    background-color: #151515;
+    margin: 0;
+    border-top: solid 1px whitesmoke;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
