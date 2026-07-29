@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>L7 Assignment 3 - BTF</title>
+        <!-- Lesson 7: Individual Assignment 3 - The Responsive Restaurant 
+         IST 250
+         Branson T Fausey
+         13-July-2026 -->
+        <link rel="icon" href="IMG_3419.png">
+        <link rel="stylesheet" href="styles.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+
+    <body>
+
+        <header>
+            <h1>B's Fine 'Q</h1>
+            <p>Gourmet American Barbecue</p>
+        </header>
+
+        <div class="container">
+
+            <!-- desktop -->
+            <div class="desktop-layout">
+                <img src="menu1.jpg" alt="Brisket"
+                    onclick="openLightbox(this.src,'Brisket BBQ Sandwich - Moist brisket on a toasted bun and topped with house BBQ sauce.')">
+                <img src="menu2.jpg" alt="Burger"
+                    onclick="openLightbox(this.src,'Smash Burger - Tender grass-fed ground beef on a toasted bun and topped with local garden veggies.')">
+                <img src="menu3.jpg" alt="Pulled Pork"
+                    onclick="openLightbox(this.src,'Pulled Pork BBQ Sandwich - Tender pulled pork on a toasted bun and topped with house BBQ sauce.')">
+                <img src="menu4.jpg" alt="Chicken Sliders"
+                    onclick="openLightbox(this.src,'BBQ Chicken Sliders - Tender pulled chicken on slider rolls with house BBQ sauce.')">
+                <img src="menu5.jpg" alt="Chicken Wings"
+                    onclick="openLightbox(this.src,'BBQ Sauced Chicken Wings - Tender dark meat chicken wings with house BBQ sauce.')">
+                <img src="menu6.jpg" alt="Chili"
+                    onclick="openLightbox(this.src,'House Chili - Homemade three-bean chili with corn, macaroni, and a little kick.')">
+            </div>
+
+            <!-- tablet -->
+            <div class="tablet-layout">
+                <div class="menu-item">
+                    <img src="menu1.jpg" alt="Brisket">
+                    <div>
+                        <h3>Brisket BBQ Sandwich</h3>
+                        <p>Moist brisket on a toasted bun and topped with house BBQ sauce.</p>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="menu2.jpg" alt="Burger">
+                    <div>
+                        <h3>Smash Burger</h3>
+                        <p>Tender grass-fed ground beef on a toasted bun and topped with local garden veggies.</p>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="menu3.jpg" alt="Pork">
+                    <div>
+                        <h3>Pulled Pork BBQ Sandwich</h3>
+                        <p>Tender pulled pork on a toasted bun and topped with house BBQ sauce.</p>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="menu4.jpg" alt="Sliders">
+                    <div>
+                        <h3>BBQ Chicken Sliders</h3>
+                        <p>Tender pulled chicken on slider rolls with house BBQ sauce.</p>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="menu5.jpg" alt="Wings">
+                    <div>
+                        <h3>BBQ Sauced Chicken Wings</h3>
+                        <p>Tender dark meat chicken wings with house BBQ sauce.</p>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="menu6.jpg" alt="Chili">
+                    <div>
+                        <h3>House Chili</h3>
+                        <p>Homemade three-bean chili with corn, macaroni, and a little kick.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- mobile -->
+            <div class="phone-layout">
+                <h2>Find Us</h2>
+                <address>
+                    B's Fine 'Q<br>
+                    445 Market St<br>
+                    Williamsport, PA 17701
+                </address>
+                <br>
+                <p>
+                    From downtown Williamsport (Third/Fourth Streets), head North on Market Street,
+                    we are located on the left (West) about one block from the courthouse.
+                    Free parking is available at the library across the street.
+                </p>
+                <img src="map.png" alt="Map">
+            </div>
+        </div>
+
+        <footer>
+            <div class="location-info">
+                <h3>B's Fine 'Q</h3>
+                <address>445 Market Street, Williamsport, PA 17701</address>
+                <p>Located on the West side of Market Street in Downtown Williamsport.</p>
+            </div>
+            <br>
+            <p>
+                Phone: (570) 555-1234<br>
+                Email: info@bsfineq.com
+            </p>
+        </footer>
+
+
+        <!-- extra credit logic -->
+
+        <div class="lightbox" id="lightbox">
+            <div class="lightbox-content">
+                <span class="close" onclick="closeLightbox()">&times;</span>
+                <img id="lightbox-image" src="" alt="">
+                <h2 style="margin-top: 15px;">Menu Item</h2>
+                <p id="lightbox-text"></p>
+            </div>
+        </div>
+
+        <script>
+
+            function openLightbox(imageSrc, description) {
+                document.getElementById("lightbox").style.display = "flex";
+                document.getElementById("lightbox-image").src = imageSrc;
+                document.getElementById("lightbox-text").innerText = description;
+            }
+
+            function closeLightbox() {
+                document.getElementById("lightbox").style.display = "none";
+            }
+
+            window.onclick = function(event) {
+                let lightbox = document.getElementById("lightbox");
+                if(event.target === lightbox){
+                    closeLightbox();
+                }
+            }
+
+        </script>
+
+    </body>
+    <!-- images source: https://www.vindulge.com/ -->
+</html>
