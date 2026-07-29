@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Partner Lab 2</title>
+        <link rel="stylesheet" href="style.css">
+        
+    </head>
+
+    <body>
+        <h1 id="greeting">Hello there!</h1>
+
+        <p id="message">This is our Partner Lab 2.</p>
+
+        <hr>
+
+        <h2>You can customize this page.</h2>
+
+        <label for="nameInput">Enter your name: </label>
+        <br>
+        <input type="text" id="nameInput">
+        <br>
+
+        <label for="messageInput">Enter a message: </label>
+        <br>
+        <textarea id="messageInput" rows="3"></textarea>
+        <br>
+
+        <label for="colorSelect">Pick a background color: </label>
+        <select id="colorSelect">
+            <option value="grey">Grey</option>
+            <option value="red">Red</option>
+            <option value="blue">Blue</option>
+            <option value="green">Green</option>
+            <option value="purple">Purple</option>
+            <option value="beige">Beige</option>
+        </select>
+        <br>
+
+        <button id="submit-button">Submit</button>
+
+        <hr>
+
+        <h2>To Do List</h2>
+
+        <label for="todoInput">Enter a to do item: </label>
+        <br>
+        <input type="text" id="todoInput">
+
+        <button onclick="addTodo()">Add to do item</button>
+
+        <ol id="todoList"></ol>
+
+        <script src="script.js" defer></script>
+        </body>
+    </html>
