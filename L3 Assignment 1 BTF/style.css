@@ -1,0 +1,22 @@
+body {
+   font-family: Snell Roundhand, cursive;
+   background-color: #f0e4d8;  /* page background color */
+}
+
+h1 {
+   font-weight: 900;
+   background: linear-gradient(200deg, #d0312d, #bc544b, #7a1712, #e3242b);  /* linear color gradient, text background clip, and transparent text */
+   background-clip: text;
+   color: transparent;
+   letter-spacing: 2px;
+}
+
+h2 {
+    background-color: #bc544b;
+    color: #4e0707;  /* text color */
+    letter-spacing: 3px;
+}
+
+#Details {  /* element id specified */
+    border-style: double;  /* border */
+}
