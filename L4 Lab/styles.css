@@ -1,0 +1,97 @@
+:root {  /* modified colors with Hx */
+    --color-beige: #f0e4d8;
+    --color-blue: #879aba;
+    --color-grey: #22242a;
+
+    --color-green: #9dcfab;
+    --color-red: #c70000;
+}
+
+.calligraffitti-regular {
+  font-family: "Calligraffitti", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.quintessential-regular {  /* Google font */
+  font-family: "Quintessential", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+    background-color: var(--color-beige);
+    color: var(--color-grey);
+    font-family: "Quintessential", Times, serif;
+    margin-left: 15%;
+    margin-right: 15%;
+    padding-left: 5%;
+    padding-right: 5%;
+    text-align: justify;
+    font-size: 120%;
+}
+
+#categories {  /* applied to entire webpage */
+    background-color: var(--color-green);
+}
+
+.page-section {  /* class selector */
+    border-bottom-style: solid;
+    border-bottom-color: var(--color-grey);
+    border-bottom-width: 2px;
+    padding-bottom: 20px;
+    margin-bottom: 40px;
+}
+
+.site-name {
+    text-align: center;
+}
+
+a {
+    color: var(--color-grey);
+    text-decoration: none;
+}
+
+a:hover {  /* hover selector */
+    color: var(--color-blue);
+    text-decoration: underline;
+}
+
+#categories a:hover {
+    color: var(--color-beige);
+}
+
+#post-001 a:hover {
+    color: var(--color-green);
+}
+
+.nav-menu {
+    display: inline-block;
+}
+
+span.danger {  /* referencing span */
+    color: var(--color-red)
+}
+
+ol {
+    padding: 50px;
+    font-size: 120%;
+    font-weight: bolder;
+}
+
+ul {
+    padding: 20px;
+    font-size: 80%;
+    font-weight: lighter;
+}
+
+.img-caption {  /* floating text and image */
+    float: right;
+    text-align: center;
+}
+
+.img-caption img {
+    padding: 10px;
+    margin-left: 20px;
+    background-color: var(--color-blue);
+}
