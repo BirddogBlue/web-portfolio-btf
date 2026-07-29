@@ -1,0 +1,255 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: whitesmoke;
+    margin: 0;                  
+    font-size: 1.5em;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 15vh auto auto auto auto 15vh;
+    grid-template-areas: 
+        "head" 
+        "side" 
+        "main1" 
+        "main2" 
+        "main3" 
+        "foot";   
+    color: #222;  
+    font-family: 'Times New Roman', Times, serif;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    border-bottom: #222 1px solid;
+    padding-bottom: 4px;
+}
+
+header a {
+    border-bottom-color: whitesmoke;
+}
+
+a:hover {
+    color: indianred;
+    border-bottom-color: indianred;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #151515BF;
+    box-shadow: 0 2px 5px #222;
+    backdrop-filter: blur(7px);
+    margin: 0;
+    margin-bottom: 15px;
+    color: whitesmoke;
+}
+
+header p {
+    border-bottom: none;
+}
+
+header img {
+    width: 50px;
+}
+
+header img:hover {
+    filter: hue-rotate(-25deg);
+    cursor: pointer;
+}
+
+.featured-post {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.featured-post img {
+    width: 50vh;
+}
+
+main, aside {
+    text-align: center;
+    border-bottom: #222 2px solid;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+aside {
+    display: none;
+}
+
+img, a, p {
+    transition-duration: .3s;
+}
+
+p {
+    border-bottom: 1px #222 solid;
+}
+
+.categories {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+ul {
+    list-style: none;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "img01 img01 img02"
+        "img03 img04 img05"
+        "img06 img07 img07";
+}
+
+.gallery img {
+    border: 2px whitesmoke solid;
+}
+
+p:hover {
+    transform: scale(1.2);
+    color: indianred;
+    border-bottom-color: indianred;
+}
+
+img:hover {
+    transform: scale(1.2);
+}
+
+#main3 {
+    border-bottom: none;
+}
+
+footer, header {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    background-color: #151515BF;
+    box-shadow: 0 -2px 5px #222;
+    margin: 0;
+    margin-top: 15px;
+    color: whitesmoke;
+}
+
+.contact-scroll {
+    display: none;
+}
+
+.randomduck1 {
+    animation: randomduck1 5s linear infinite; 
+}
+
+.randomduck2 {
+    animation: randomduck2 5.25s linear infinite;
+}
+
+.randomduck1, .randomduck2 {
+    width: 150px; 
+    height: auto;
+    position: absolute;
+}
+
+@keyframes randomduck1 {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(100vw);
+    }
+}
+
+@keyframes randomduck2 {
+    from {
+        transform: translateX(-150%);
+    }
+    to {
+        transform: translateX(100vw);
+    }
+}
+
+/* Grid Setup */
+
+header {
+    grid-area: head;
+}
+
+#main1 {
+    grid-area: main1;      
+}
+
+#main2 {
+    grid-area: main2;      
+}
+
+#main3 {
+    grid-area: main3;      
+}
+
+aside {
+    grid-area: side;      
+}
+
+footer {
+    grid-area: foot;      
+}
+
+#img01 { grid-area: img01; }
+#img02 { grid-area: img02; }
+#img03 { grid-area: img03; }
+#img04 { grid-area: img04; }
+#img05 { grid-area: img05; }
+#img06 { grid-area: img06; }
+#img07 { grid-area: img07; }
+
+/* Default: Mobile */
+
+/* Desktop */   
+@media all and (min-width: 600px) {
+    body {         
+            grid-template-columns: 24vw 38vw 38vw;
+            grid-template-rows: 10vh 60vh 60vh 15vh; 
+            grid-template-areas: 
+            "head head head" 
+            "side main1 main1"
+            "side main2 main3"
+            "foot foot foot";
+    }
+    aside, #main2 {
+        border-right: #222 2px solid;
+    }
+    header, main, aside {
+        border-bottom: none;
+    }
+    .contact-scroll {
+        display: inline;
+    }
+    aside {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
